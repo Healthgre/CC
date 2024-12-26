@@ -1,9 +1,3 @@
-"""URL"""
-url_prod = "https://clearcase.net/"  # Прод урла.
-url_stand = "https://stand.ru.tuna.am/"  # Стенд урла.
-
-url = url_stand
-
 """Куку и прочее"""
 token = "v4.local.qsWTdNfKyB2Y5ydrhvLSYg0G1L1eP47lMBAwaDq86x-PFZam9w3j17InKxfCNcrvIhAF-tTQgX5ytW-fIRaSyRPIaxR2pwRXH5SFTjeTO6KiqCfqLtwRXEmbwKgmELjZ0IU0FwHcT-XgH4Q_IN-pRCtRb9ZJStSYirxW7T9ZWGGERzMGJ6zvYRx50LItqEng0ooR1i3lNvDhcVvGt3g"
 
