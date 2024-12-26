@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 from pythonProject.src.authentication import authentication
 from pythonProject.src.clean import clean
 from pythonProject.src.logout import logout
-from pythonProject.src.variables import clear_case_inscription_xpath
+from pythonProject.src.variables import clear_case_inscription_xpath, url
 
 
 @pytest.fixture(scope="session")
@@ -13,7 +13,7 @@ def driver():
     options = webdriver.ChromeOptions()
     options.add_experimental_option("detach", True)
     driver = webdriver.Chrome(options=options)
-    driver.get("https://clearcase.net")
+    driver.get(url)
     driver.maximize_window()
     yield driver
     # driver.close()

@@ -10,7 +10,7 @@ from pythonProject.src.variables import upgrade_container_xpath, price_inventory
     name_inventory_case_xpath, name_upgrade_skin_xpath, percent_xpath, start_button_xpath, result_xpath, \
     inactive_start_button_xpath, button_history_xpath, button_inventory_xpath, \
     case_name_history_xpath, any_skin_in_inventory_xpath, balance_adjustment_slider_xpath, balance_xpath, \
-    spending_balance_xpath
+    spending_balance_xpath, url
 
 
 class Test_037_upgrade_with_coins:
@@ -22,7 +22,7 @@ class Test_037_upgrade_with_coins:
         wait_for_round = WebDriverWait(driver, 20)  # Ожидание апгрейда, жду когда анимация прокрутится.
 
         """Флаги и скины."""
-        driver.get("https://clearcase.net/upgrade")  # Перехожу на страницу апгрейда.
+        driver.get(f"{url}upgrade")  # Перехожу на страницу апгрейда.
         flag_win = False
         flag_lose = False
         flag_skin_count = 10
@@ -112,19 +112,19 @@ class Test_037_upgrade_with_coins:
             if result == "Проигрыш":
                 flag_skin_count -= 1  # Отнял один скин который потратили при апгрейде.
                 flag_lose = True
-                driver.get("https://clearcase.net/profile")
+                driver.get(f"{url}profile")
                 wait.until(EC.visibility_of_element_located(
                     (By.XPATH, button_history_xpath)))  # Жду появления кнопки "Инвентарь".
                 driver.find_element(By.XPATH, button_history_xpath).click()  # Нажал на кнопку "История".
                 case_name_history = driver.find_element(By.XPATH,
                                                         case_name_history_xpath).text  # Взял имя первого скина из истории (то есть последнего, который попал в историю).
                 assert case_name_history == name_inventory_case  # Сравнил имя скина который потратили при апгрейде и того, что взяли из истории.
-                driver.get("https://clearcase.net/upgrade")  # Вернулся на страницу апгрейда.
+                driver.get(f"{url}upgrade")  # Вернулся на страницу апгрейда.
                 wait.until(
                     EC.visibility_of_element_located((By.XPATH, upgrade_container_xpath)))  # Жду появление инвентарь.
             else:
                 flag_win = True
-                driver.get("https://clearcase.net/profile")
+                driver.get(f"{url}profile")
                 wait.until(EC.visibility_of_element_located(
                     (By.XPATH, button_history_xpath)))  # Жду появления кнопки "Инвентарь".
                 driver.find_element(By.XPATH, button_history_xpath).click()  # Нажал на кнопку "История".
@@ -142,6 +142,6 @@ class Test_037_upgrade_with_coins:
                 names_in_inventory = [i.text for i in names_in_inventory]  # Перевёл имена в текст.
                 assert name_upgrade_case in names_in_inventory  # Проверил наличие имени выигранного скина в инвентаре.
 
-                driver.get("https://clearcase.net/upgrade")
+                driver.get(f"{url}upgrade")
                 wait.until(
                     EC.visibility_of_element_located((By.XPATH, upgrade_container_xpath)))  # Жду появление инвентарь.

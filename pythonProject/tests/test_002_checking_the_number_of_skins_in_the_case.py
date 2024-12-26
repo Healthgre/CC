@@ -12,7 +12,7 @@ class Test_002_checking_the_number_of_skins_in_the_case:
         assert driver.find_element(By.ID, "tg-auth")  # Проверка отсутствия авторизации.
         assert driver.find_element(By.ID, "steam-auth")
 
-        for i in range(2, 4):  # У нас 2 категории, поэтому диапазон от 2 до 4.
+        for i in range(2, 5):  # У нас 2 категории, поэтому диапазон от 2 до 4.
             cases_count = len(driver.find_elements(By.XPATH,
                                                    f"//main[@class='page-content']/div[{i}]/div[2]/button"))  # Высчитал колличество кейсов в категории. "i" - категория кейсов.
 

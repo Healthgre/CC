@@ -1,5 +1,11 @@
+"""URL"""
+url_prod = "https://clearcase.net/"  # Прод урла.
+url_stand = "https://stand.ru.tuna.am/"  # Стенд урла.
+
+url = url_stand
+
 """Куку и прочее"""
-token = "v4.local.ibWaumhA40hcgOqdAYRNroT1JvnNeJPSRjlGcBZ7tS8KFwsutA3g7VghOxKEpOJckw51XaVlKH1f45oIBErq0dH6ZRrUYDszLFifhZ3Gn-ygNwzaWg7rqRc1chisGIWG9BeFN43yslvTS1G-Rx4T8zropkdQp1HEQJPX1sgewgpxZ9I1zKcDTBrTkuBXMnAT-1vAizj-MYOjdrlBfrU"
+token = "v4.local.qsWTdNfKyB2Y5ydrhvLSYg0G1L1eP47lMBAwaDq86x-PFZam9w3j17InKxfCNcrvIhAF-tTQgX5ytW-fIRaSyRPIaxR2pwRXH5SFTjeTO6KiqCfqLtwRXEmbwKgmELjZ0IU0FwHcT-XgH4Q_IN-pRCtRb9ZJStSYirxW7T9ZWGGERzMGJ6zvYRx50LItqEng0ooR1i3lNvDhcVvGt3g"
 
 """Главная страница и хедер"""
 clear_case_inscription_xpath = "//img[@alt='home']"  # Clera Case надпись.
