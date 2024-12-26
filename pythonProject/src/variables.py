@@ -10,9 +10,14 @@ token = "v4.local.qsWTdNfKyB2Y5ydrhvLSYg0G1L1eP47lMBAwaDq86x-PFZam9w3j17InKxfCNc
 """Главная страница и хедер"""
 clear_case_inscription_xpath = "//img[@alt='home']"  # Clera Case надпись.
 
-cases_button_xpath = "//div[@class='flex flex-row gap-[38px] self-center z-10']/div[1]"  # Кнопка "Кейсы".
-upgrade_button_xpath = "//div[@class='flex flex-row gap-[38px] self-center z-10']/div[2]"  # Кнопка "Апгрейды".
-contract_button_xpath = "//div[@class='flex flex-row gap-[38px] self-center z-10']/div[3]"  # Кнопка "Контракты".
+#cases_button_xpath = "//div[@class='flex flex-row gap-[38px] self-center z-10']/div[1]"  # Кнопка "Кейсы". Новогоднее.
+cases_button_xpath = "//div[@class='flex flex-row gap-[38px] self-center']/button[1]"  # Кнопка "Кейсы".
+
+#upgrade_button_xpath = "//div[@class='flex flex-row gap-[38px] self-center z-10']/div[2]"  # Кнопка "Апгрейды". Новогоднее.
+upgrade_button_xpath = "//div[@class='flex flex-row gap-[38px] self-center']/button[2]"  # Кнопка "Апгрейды".
+
+#contract_button_xpath = "//div[@class='flex flex-row gap-[38px] self-center z-10']/div[3]"  # Кнопка "Контракты". Новогоднее.
+contract_button_xpath = "//div[@class='flex flex-row gap-[38px] self-center']/button[3]"  # Кнопка "Контракты".
 
 replenishment_button_xpath = "//div[@class='replenishment-button']"  # Кнопка пополнения счёта.
 balance_xpath = "//div[@class='replenishment-button']/div[1]"  # Баланс из хедера.
@@ -64,7 +69,7 @@ contract_container_xpath = "//div[@class='contract-grid-container']"  # Сетк
 """Cтраница пользователя"""
 profile_content_xpath = "//div[@class='profile-content']"  # Контент профиля на странице пользователя.
 
-logout_button_xpath = "//button[@class='__className_86079f logout-button']"  # Кнопка выходва из аккаунта.
+logout_button_xpath = "//button[@class='__className_86079f logout-button']"  # Кнопка выхода из аккаунта.
 
 active_sale_button_xpath = "//div[@class='flex flex-row justify-center gap-6']/button[1]"  # Активная кнопка "Продать".
 select_all_button_xpath = "//div[@class='flex flex-row justify-center gap-6']/button[2]"  # Кнопка "Выделить всё".
