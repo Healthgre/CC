@@ -1,16 +1,22 @@
+"""URL"""
+url_prod = "https://clearcase.net/"  # Прод урла.
+url_stand = "https://stand.ru.tuna.am/"  # Стенд урла.
+
+url = url_stand
+
 """Куку и прочее"""
 token = "v4.local.qsWTdNfKyB2Y5ydrhvLSYg0G1L1eP47lMBAwaDq86x-PFZam9w3j17InKxfCNcrvIhAF-tTQgX5ytW-fIRaSyRPIaxR2pwRXH5SFTjeTO6KiqCfqLtwRXEmbwKgmELjZ0IU0FwHcT-XgH4Q_IN-pRCtRb9ZJStSYirxW7T9ZWGGERzMGJ6zvYRx50LItqEng0ooR1i3lNvDhcVvGt3g"
 
 """Главная страница и хедер"""
 clear_case_inscription_xpath = "//img[@alt='home']"  # Clera Case надпись.
 
-#cases_button_xpath = "//div[@class='flex flex-row gap-[38px] self-center z-10']/div[1]"  # Кнопка "Кейсы". Новогоднее.
+# cases_button_xpath = "//div[@class='flex flex-row gap-[38px] self-center z-10']/div[1]"  # Кнопка "Кейсы". Новогоднее.
 cases_button_xpath = "//div[@class='flex flex-row gap-[38px] self-center']/button[1]"  # Кнопка "Кейсы".
 
-#upgrade_button_xpath = "//div[@class='flex flex-row gap-[38px] self-center z-10']/div[2]"  # Кнопка "Апгрейды". Новогоднее.
+# upgrade_button_xpath = "//div[@class='flex flex-row gap-[38px] self-center z-10']/div[2]"  # Кнопка "Апгрейды". Новогоднее.
 upgrade_button_xpath = "//div[@class='flex flex-row gap-[38px] self-center']/button[2]"  # Кнопка "Апгрейды".
 
-#contract_button_xpath = "//div[@class='flex flex-row gap-[38px] self-center z-10']/div[3]"  # Кнопка "Контракты". Новогоднее.
+# contract_button_xpath = "//div[@class='flex flex-row gap-[38px] self-center z-10']/div[3]"  # Кнопка "Контракты". Новогоднее.
 contract_button_xpath = "//div[@class='flex flex-row gap-[38px] self-center']/button[3]"  # Кнопка "Контракты".
 
 replenishment_button_xpath = "//div[@class='replenishment-button']"  # Кнопка пополнения счёта.
@@ -93,3 +99,7 @@ agreement_inscription_xpath = "//h1[@class='self-center text-4xl uppercase']"  #
 """Вопрос - Ответ"""
 questions_link_xpath = "//div[@class='footer-links md:flex-row md:gap-5']/a[2]"  # Линка на Вопрос-Ответ в футере.
 questions_inscription_xpath = "//h1[@class='self-center text-4xl uppercase']"  # Надпись "Часто задаваемые вопросы".
+
+"""Всплывающие сообщения"""
+head_message_xpath = "//div[@class=' w-full h-full  px-[10px] pb-[6px] pt-[4px]']/div[1]/h3"  # Заголовок сообщения.
+body_message_xpath = "//div[@class=' w-full h-full  px-[10px] pb-[6px] pt-[4px]']/div[2]/p"  # Текст сообщения.
